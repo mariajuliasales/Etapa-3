@@ -4,7 +4,8 @@
 #include <string.h>
 
 
-/* Sistema de controle Pousada GMM */
+/*SISTEMA DE CONTROLE POUSADA GMM*/
+
 
 struct Quarto {
     char nome_cliente[100];
@@ -17,6 +18,7 @@ struct Quarto {
               };
 
 #define Q 10
+
 
 void traco (){
     printf("\n -------------------------------------------------------------\n");
@@ -36,6 +38,7 @@ void agradecimento(){
     system("cls");
                     }
 
+
 float pagamento(float diaria,int dias){
     return diaria*dias;
                                       }
@@ -46,6 +49,7 @@ int main()
     setlocale(LC_ALL,"");
 
     struct Quarto quartos[Q];
+
     float dias;
     char a;
     const float diaria=120;
@@ -56,7 +60,7 @@ int main()
     pont_arq=fopen("arquivo_ETAPA3-Giovana,Maria Julia e Matheus.txt","w");
 
     if(pont_arq==NULL){
-            printf("ERRO DE ABERTURA DO ARQUIVO!");
+            printf("FALHA DE ABERTURA DO ARQUIVO!");
             return 1;
                       }
 
@@ -75,6 +79,7 @@ int main()
         traco();
         scanf("%d",&acao);
         system("cls");
+
 
         switch (acao){
 
